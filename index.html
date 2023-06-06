@@ -31,25 +31,38 @@
     }
   </style>
   <script>
-    function changeColor(element, color) {
-      element.style.backgroundColor = color;
+    function toggleColor(element) {
+      if (element.style.backgroundColor === 'red') {
+        element.style.backgroundColor = 'blue';
+      } else {
+        element.style.backgroundColor = 'red';
+      }
     }
   </script>
 </head>
 <body>
   <div class="circle-container">
     <div class="row">
-      <div class="circle" onclick="changeColor(this, 'red')"></div>
-      <div class="circle" onclick="changeColor(this, 'blue')"></div>
-      <div class="circle" onclick="changeColor(this, 'red')"></div>
+      <div class="circle" onclick="toggleColor(this)"></div>
     </div>
     <div class="row">
-      <div class="circle" onclick="changeColor(this, 'blue')"></div>
+      <div class="circle" onclick="toggleColor(this)"></div>
+      <div class="circle" onclick="toggleColor(this)"></div>
+      <div class="circle" onclick="toggleColor(this)"></div>
     </div>
     <div class="row">
-      <div class="circle" onclick="changeColor(this, 'red')"></div>
-      <div class="circle" onclick="changeColor(this, 'blue')"></div>
-      <div class="circle" onclick="changeColor(this, 'red')"></div>
+      <div class="circle" onclick="toggleColor(this)"></div>
+    </div>
+    <div class="row">
+      <div class="circle" onclick="toggleColor(this)"></div>
+    </div>
+    <div class="row">
+      <div class="circle" onclick="toggleColor(this)"></div>
+      <div class="circle" onclick="toggleColor(this)"></div>
+      <div class="circle" onclick="toggleColor(this)"></div>
+    </div>
+    <div class="row">
+      <div class="circle" onclick="toggleColor(this)"></div>
     </div>
   </div>
 </body>
