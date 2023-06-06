@@ -6,11 +6,15 @@
     /* Style for the circles */
     .circle-container {
       display: flex;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
+      height: 100vh;
     }
 
     .row {
       display: flex;
+      justify-content: center;
     }
 
     .circle {
@@ -36,13 +40,15 @@
   <div class="circle-container">
     <div class="row">
       <div class="circle" onclick="changeColor(this, 'red')"></div>
+      <div class="circle" onclick="changeColor(this, 'blue')"></div>
+      <div class="circle" onclick="changeColor(this, 'red')"></div>
     </div>
     <div class="row">
       <div class="circle" onclick="changeColor(this, 'blue')"></div>
-      <div class="circle" onclick="changeColor(this, 'green')"></div>
-      <div class="circle" onclick="changeColor(this, 'blue')"></div>
     </div>
     <div class="row">
+      <div class="circle" onclick="changeColor(this, 'red')"></div>
+      <div class="circle" onclick="changeColor(this, 'blue')"></div>
       <div class="circle" onclick="changeColor(this, 'red')"></div>
     </div>
   </div>
