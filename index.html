@@ -4,12 +4,20 @@
   <title>My GitHub.io Page</title>
   <style>
     /* Style for the circles */
+    .circle-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .row {
+      display: flex;
+    }
+
     .circle {
-      display: inline-block;
       width: 50px;
       height: 50px;
       border-radius: 50%;
-      background-color: white;
+      border: 2px solid black;
       margin: 10px;
     }
     
@@ -19,29 +27,24 @@
     }
   </style>
   <script>
-    function changeColor(color) {
-      var circles = document.getElementsByClassName('circle');
-      for (var i = 0; i < circles.length; i++) {
-        circles[i].style.backgroundColor = color;
-      }
+    function changeColor(element, color) {
+      element.style.backgroundColor = color;
     }
   </script>
 </head>
 <body>
-  <div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-  </div>
-  <div>
-    <button class="color-button" onclick="changeColor('red')">Change to Red</button>
-    <button class="color-button" onclick="changeColor('blue')">Change to Blue</button>
+  <div class="circle-container">
+    <div class="row">
+      <div class="circle" onclick="changeColor(this, 'red')"></div>
+    </div>
+    <div class="row">
+      <div class="circle" onclick="changeColor(this, 'blue')"></div>
+      <div class="circle" onclick="changeColor(this, 'green')"></div>
+      <div class="circle" onclick="changeColor(this, 'blue')"></div>
+    </div>
+    <div class="row">
+      <div class="circle" onclick="changeColor(this, 'red')"></div>
+    </div>
   </div>
 </body>
 </html>
