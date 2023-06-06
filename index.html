@@ -42,9 +42,34 @@
         element.style.backgroundColor = 'red';
       }
     }
+
+    function updateScores(increment) {
+      // Get the <h1> element with id "scores"
+      var scoresElement = document.getElementById("scores");
+      
+      // Get the current scores
+      var currentScores = scoresElement.textContent.split(":");
+      var homeScore = parseInt(currentScores[0]);
+      var awayScore = parseInt(currentScores[1]);
+      
+      // Update the scores
+      if (increment) {
+        homeScore++;
+      } else {
+        awayScore--;
+      }
+      
+      // Update the <h1> element with the new scores
+      scoresElement.textContent = homeScore + ":" + awayScore;
+    }
   </script>
 </head>
 <body>
+  <header>
+    <h1 id="scores">0:0</h1>
+  </header>
+  <button onclick="updateScores(true)">Increase Score</button>
+  <button onclick="updateScores(false)">Decrease Score</button>
   <div class="circle-container">
     <div class="row">
       <div class="circle" onclick="toggleColor(this)"></div>
